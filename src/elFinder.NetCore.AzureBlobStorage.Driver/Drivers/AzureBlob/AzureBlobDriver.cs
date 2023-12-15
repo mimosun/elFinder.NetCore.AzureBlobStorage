@@ -551,7 +551,7 @@ namespace elFinder.NetCore.AzureBlobStorage.Driver.Drivers.AzureBlob
 
             var root = Roots.First(r => r.VolumeId == split.Prefix);
             var path = HttpEncoder.DecodePath(split.Content);
-            var dirUrl = path != root.RootDirectory ? path : string.Empty;
+            var dirUrl = !root.RootDirectory.EndsWith(path) ? path : string.Empty;
             var dir = new AzureBlobDirectory(root.RootDirectory + dirUrl);
 
             if (await dir.ExistsAsync) return new FullPath(root, dir, target);

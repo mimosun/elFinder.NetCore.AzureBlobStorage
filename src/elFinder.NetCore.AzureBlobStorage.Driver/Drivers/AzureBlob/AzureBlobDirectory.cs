@@ -96,9 +96,8 @@ namespace elFinder.NetCore.AzureBlobStorage.Driver.Drivers.AzureBlob
 
         public Task RefreshAsync()
         {
-            throw new NotImplementedException();
+            return Task.CompletedTask;
         }
-
 
         public FileAttributes Attributes
         {

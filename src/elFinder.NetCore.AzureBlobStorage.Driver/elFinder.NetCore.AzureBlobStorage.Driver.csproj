@@ -22,7 +22,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
+        <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
         <ProjectReference Include="..\elFinder.NetCore\elFinder.NetCore.csproj" />
     </ItemGroup>
 </Project>

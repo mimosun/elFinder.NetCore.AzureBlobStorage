@@ -126,7 +126,6 @@ namespace elFinder.NetCore.AzureBlobStorage.Web.Controllers
                 Alias = "Files",    // Beautiful name given to the root/home folder
                 //MaxUploadSizeInKb = 2048, // Limit imposed to user uploaded file <= 2048 KB
                 //MaxUploadSizeInMb = 85, // Comment it to taker thw web.config value
-                //LockedFolders = new List<string>(new string[] { "Folder1" })
             };
 
             driver.AddRoot(root);
@@ -135,8 +134,7 @@ namespace elFinder.NetCore.AzureBlobStorage.Web.Controllers
         }
 
         #endregion
-
-
+        
     }
 
 }
