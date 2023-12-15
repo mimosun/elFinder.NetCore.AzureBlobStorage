@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "elFinder.NetCore.AzureBlobS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "elFinder.NetCore.AzureBlobStorage.Driver", "elFinder.NetCore.AzureBlobStorage.Driver\elFinder.NetCore.AzureBlobStorage.Driver.csproj", "{A68DB716-710B-4545-A4F9-1278861339F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "elFinder.NetCore", "elFinder.NetCore\elFinder.NetCore.csproj", "{C77F74F7-122D-49D3-8B3F-60BC8335AFA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{A68DB716-710B-4545-A4F9-1278861339F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A68DB716-710B-4545-A4F9-1278861339F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A68DB716-710B-4545-A4F9-1278861339F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C77F74F7-122D-49D3-8B3F-60BC8335AFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C77F74F7-122D-49D3-8B3F-60BC8335AFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C77F74F7-122D-49D3-8B3F-60BC8335AFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C77F74F7-122D-49D3-8B3F-60BC8335AFA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
