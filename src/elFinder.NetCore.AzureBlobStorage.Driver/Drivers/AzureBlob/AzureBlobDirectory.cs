@@ -57,27 +57,46 @@ namespace elFinder.NetCore.AzureBlobStorage.Driver.Drivers.AzureBlob
         }
 
 
-        public async Task<IEnumerable<IDirectory>> GetDirectoriesAsync()
+        public Task<IEnumerable<IDirectory>> GetDirectoriesAsync()
         {
             var model = AzureBlobStorageApi.ListFilesAndDirectoriesAsync(BlobItemName);
 
             var directories = model.Where(i => i.Name.EndsWith("/"))
-                .Select(i => new AzureBlobDirectory(i)).ToList();
+                .Select(i => new AzureBlobDirectory(i) as IDirectory);
 
-            return directories;
+            return Task.FromResult(directories);
+        }
+
+        public Task<IEnumerable<IDirectory>> GetDirectoriesAsync(string pattern)
+        {
+            throw new NotImplementedException();
         }
 
 
-        public async Task<IEnumerable<IFile>> GetFilesAsync(IEnumerable<string> mimeTypes)
+        public Task<IEnumerable<IFile>> GetFilesAsync(IEnumerable<string> mimeTypes)
         {
             var result = AzureBlobStorageApi.ListFilesAndDirectoriesAsync(BlobItemName)
                 .Where(i => !i.Name.EndsWith("/"))
-                .Select(i => new AzureBlobFile(i))
-                .ToList();
+                .Select(i => new AzureBlobFile(i) as IFile);
 
             var mimeTypesList = mimeTypes.ToList();
 
-            return mimeTypesList.Any() ? result.Where(f => mimeTypesList.Contains(f.MimeType)) : result;
+            if (mimeTypesList.Any())
+            {
+                result = result.Where(f => mimeTypesList.Contains(f.MimeType));
+            }
+
+            return Task.FromResult(result);
+        }
+
+        public Task<IEnumerable<IFile>> GetFilesAsync(IEnumerable<string> mimeTypes, string pattern)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task RefreshAsync()
+        {
+            throw new NotImplementedException();
         }
 
 

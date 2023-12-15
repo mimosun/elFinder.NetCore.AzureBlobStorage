@@ -45,7 +45,7 @@ namespace elFinder.NetCore.AzureBlobStorage.Driver.Models
                 UnixTimeStamp = (long) (fileProperties.LastModified.DateTime - unixOrigin).TotalSeconds,
                 Read = 1,
                 Write = volume.IsReadOnly ? (byte) 0 : (byte) 1,
-                Locked = volume.LockedFolders != null && volume.LockedFolders.Any(f => f == file.Directory.Name) || volume.IsLocked ? (byte) 1 : (byte) 0,
+                Locked = volume.IsLocked ? (byte) 1 : (byte) 0,
                 Name = file.Name,
                 Size = fileProperties.ContentLength,
                 Mime = MimeHelper.GetMimeType(file.Extension),

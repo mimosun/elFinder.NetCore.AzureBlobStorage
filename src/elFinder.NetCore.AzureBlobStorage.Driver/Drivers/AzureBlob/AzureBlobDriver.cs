@@ -729,6 +729,11 @@ namespace elFinder.NetCore.AzureBlobStorage.Driver.Drivers.AzureBlob
             return await Json(output);
         }
 
+        public Task<JsonResult> SearchAsync(FullPath path, string query, IEnumerable<string> mimeTypes)
+        {
+            throw new NotImplementedException();
+        }
+
 
         public async Task<JsonResult> SizeAsync(IEnumerable<FullPath> paths)
         {
@@ -796,7 +801,7 @@ namespace elFinder.NetCore.AzureBlobStorage.Driver.Drivers.AzureBlob
             if (path.RootVolume.MaxUploadSize.HasValue && fileList.Any(x => x.Length > path.RootVolume.MaxUploadSize))
 
                 // Max upload size exceeded
-                return Error.MaxUploadFileSize();
+                return Error.UploadFileTooLarge();
 
             foreach (var rename in renames)
             {
@@ -851,6 +856,16 @@ namespace elFinder.NetCore.AzureBlobStorage.Driver.Drivers.AzureBlob
             }
 
             return await Json(response);
+        }
+
+        public Task<JsonResult> ZipDownloadAsync(IEnumerable<FullPath> paths)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<FileStreamResult> ZipDownloadAsync(FullPath cwdPath, string archivedFileKey, string downloadFileName, string mimeType)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

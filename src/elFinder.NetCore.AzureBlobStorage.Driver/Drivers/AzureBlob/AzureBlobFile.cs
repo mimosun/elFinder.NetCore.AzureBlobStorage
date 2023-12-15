@@ -88,6 +88,11 @@ namespace elFinder.NetCore.AzureBlobStorage.Driver.Drivers.AzureBlob
             return AzureBlobStorageApi.PutAsync(BlobItemName, stream);
         }
 
+        public Task RefreshAsync()
+        {
+            throw new NotImplementedException();
+        }
+
 
         public FileAttributes Attributes
         {

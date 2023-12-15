@@ -2,15 +2,15 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <PackageId>elFinder.NetCore.AzureBlobStorage.Driver</PackageId>
-        <Authors>Bruno Melegari, Mariusz Mesjasz</Authors>
+        <PackageId>elFinder.NetCore.AzureBlobStorage.Combine</PackageId>
+        <Authors>Bruno Melegari, Mariusz Mesjasz, Mimosun</Authors>
         <Company>N/A</Company>
         <PackageTags>elFinder, .NET Core, Azure Blob storage</PackageTags>
         <Title>Microsoft Azure Blob storage driver for elFinder.NetCore</Title>
         <Description>Allows elFinder file manager to use an Azure Blob sorage in the cloud instead of the local file system</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://github.com/brunomel/elFinder.NetCore.AzureBlobStorage</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/brunomel/elFinder.NetCore.AzureBlobStorage</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/mimosun/elFinder.NetCore.AzureBlobStorage</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/mimosun/elFinder.NetCore.AzureBlobStorage</RepositoryUrl>
         <OutputType>Library</OutputType>
         <IsPackable>true</IsPackable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -18,7 +18,7 @@
         <PackageIcon></PackageIcon>
         <LangVersion>8</LangVersion>
         <Nullable>warnings</Nullable>
-        <Version>3.1.0.0</Version>
+        <Version>3.1.11</Version>
     </PropertyGroup>
 
     <ItemGroup>
