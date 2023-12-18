@@ -18,11 +18,14 @@
         <PackageIcon></PackageIcon>
         <LangVersion>8</LangVersion>
         <Nullable>warnings</Nullable>
-        <Version>3.1.11</Version>
+        <Version>3.2.0</Version>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
-        <ProjectReference Include="..\elFinder.NetCore\elFinder.NetCore.csproj" />
+        <ProjectReference Include="..\elFinder.NetCore\elFinder.NetCore.csproj">
+            <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+            <IncludeAssets>elFinder.NetCore.dll</IncludeAssets>
+        </ProjectReference>
     </ItemGroup>
 </Project>
