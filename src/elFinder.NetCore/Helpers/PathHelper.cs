@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 
 namespace elFinder.NetCore.Helpers
 {
@@ -9,14 +8,12 @@ namespace elFinder.NetCore.Helpers
 
         public static string GetFullPath(string path)
         {
-            var fullPath = Path.GetFullPath(path);
-            return fullPath;
+            return Path.GetFullPath(path);
         }
 
         public static string GetFullPathNormalized(string path)
         {
-            var fullPath = Path.GetFullPath(path).TrimEnd(SeparatorChars);
-            return fullPath;
+            return Path.GetFullPath(path).TrimEnd(SeparatorChars);
         }
 
         public static string NormalizePath(string fullPath)
@@ -24,15 +21,10 @@ namespace elFinder.NetCore.Helpers
             return fullPath.TrimEnd(SeparatorChars);
         }
 
-        public static string SafelyCombine(string fromParent, params string[] paths)
+        public static string SafelyCombine(params string[] paths)
         {
-            var finalPath = Path.GetFullPath(Path.Combine(paths))
+            return GetFullPath(Path.Combine(paths))
                 .Replace(Path.AltDirectorySeparatorChar, Path.DirectorySeparatorChar);
-
-            if (!finalPath.StartsWith(fromParent.TrimEnd(SeparatorChars) + Path.DirectorySeparatorChar))
-                throw new ArgumentException("Path must be inside parent");
-
-            return finalPath;
         }
     }
 }

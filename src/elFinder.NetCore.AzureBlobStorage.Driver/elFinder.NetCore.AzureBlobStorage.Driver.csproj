@@ -16,7 +16,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <LangVersion>8</LangVersion>
         <Nullable>warnings</Nullable>
-        <Version>3.2.0</Version>
+        <Version>3.2.3</Version>
     </PropertyGroup>
 
     <ItemGroup>
